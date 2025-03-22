@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbon Crunch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardPop {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-card {
+            animation: cardPop 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+            <!-- <div class="text-black-500 text-2xl font-bold"><img src="./assets/logo.png" alt="">CarbonCrunch</div> -->
+            <div class="flex items-center space-x-2 text-black text-2xl font-bold">
+                <img src="./assets/logo.png" alt="Logo" class="h-8 w-auto">
+                <span>CarbonCrunch</span>
+            </div>
+
+            <div class="hidden md:flex gap-6 text-black-700 font-['DM_Sans']">
+                <a href="#" class="hover:text-green-500">Home</a>
+                <a href="#" class="hover:text-green-500">Services</a>
+                <a href="#" class="hover:text-green-500">Blog</a>
+                <a href="#" class="hover:text-green-500">About Us</a>
+                <a href="#" class="hover:text-green-500">Contact</a>
+            </div>
+            <div class="hidden md:flex gap-4 font-['DM_Sans']">
+                <button class="bg-green-100 text-green-700 px-4 py-2 rounded-lg hover:scale-105 transition"
+                    style="height: 41px; width: 134px;">
+                    Login
+                </button>
+
+                <button class="bg-green-500 text-black-700 px-4 py-2 rounded-lg hover:scale-105 transition">Book
+                    Demo</button>
+            </div>
+            <button id="menu-btn" class="md:hidden text-green-500 text-2xl">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 mt-4 font-['DM_Sans']">
+            <a href="#" class="hover:text-green-500">Home</a>
+            <a href="#" class="hover:text-green-500">Services</a>
+            <a href="#" class="hover:text-green-500">Blog</a>
+            <a href="#" class="hover:text-green-500">About Us</a>
+            <a href="#" class="hover:text-green-500">Contact</a>
+            <button class="bg-green-100 text-green-700 px-4 py-2 rounded-lg hover:scale-105 transition">Login</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition">Book Demo</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="p-10 text-center md:text-left animate-fadeInUp font-['DM_Sans']">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <!-- <div class="bg-black text-white text-sm inline-block px-8 py-2 rounded-full mb-4 "><img src="./assets/Icon Container (1).png" alt="">Let’s Save our Environment</div> -->
+                    <div
+                class="font-['DM_Sans'] bg-black text-white text-sm inline-flex items-center px-8 py-2 rounded-full mb-4 space-x-2">
+                        <img src="./assets/Icon Container (1).png" alt="Icon" class="h-5 w-5">
+                        <span>Let’s Save our Environment</span>
+                    </div>
+
+                    <h1 class="font-aeonik text-4xl md:text-5xl font-bold">Optimize your eco reporting with</h1>
+                    <div
+                        class=" text-4xl md:text-5xl font-bold text-white bg- text-sm inline-block px-7 py-4 my-4 pt-4 rounded-full mb-4">
+                        <span class="text-orange-400">CARBON CRUNCH
+                    </div>
+                    
+                    <p class="mt-4 text-lg"><span class="text-green-500 font-bold">95%</span> Accurate Carbon
+                        Calculations Trusted by Industry Leaders</p>
+                    <div class="mt-6 flex gap-4 justify-center md:justify-start">
+                        <button class="bg-green-100 text-green-700 px-6 py-2 rounded-lg hover:scale-105 transition">Free
+                            Calculator</button>
+                        <button class="bg-green-500 text-white px-6 py-2 rounded-lg hover:scale-105 transition">Book
+                            Demo</button>
+                    </div>
+                </div>
+                <img src="./assets/Page 1 Image.png" alt="Eco Globe" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="bg-gray-900 text-white p-4 rounded-lg animate-card">
+                    <h2 class="text-4xl font-bold">98%</h2>
+                    <p class="text-sm">Of CEOs Agree Sustainability Is Their Responsibility</p>
+                </div>
+                <div class="bg-green-500 text-white p-4 rounded-lg animate-card" style="animation-delay: 0.1s;">
+                    <h2 class="text-4xl font-bold">3X</h2>
+                    <p class="text-sm">ESG High Performers Deliver A Higher Total Shareholder Return</p>
+                </div>
+                <div class="bg-green-100 text-green-700 p-4 rounded-lg animate-card" style="animation-delay: 0.2s;">
+                    <h2 class="text-4xl font-bold">37%</h2>
+                    <p class="text-sm">Of The World’s Largest Companies Have A Public Net Zero Target. Nearly All Are
+                        Off Track</p>
+                </div>
+                <div class="bg-gray-300 text-gray-900 p-4 rounded-lg animate-card" style="animation-delay: 0.3s;">
+                    <h2 class="text-4xl font-bold">18%</h2>
+                    <p class="text-sm">Of Companies Are Cutting Emissions Fast Enough To Reach Net Zero By 2050</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="max-w-5xl mx-auto p-8">
+        <h2 class="text-green-500 font-bold">FEATURES</h2>
+        <h1 class="text-4xl font-bold mt-2">Why <span class="text-orange-400">Carbon Crunch?</span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 1.png" alt="Automated Data Collection" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">Automated Data Collection</h3>
+                <p class="text-sm mt-2">Our system automates carbon data collection, saving time, reducing errors, and
+                    ensuring accurate sustainability reporting.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 2.png" alt="Monitoring & Reporting" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">Monitoring & Reporting</h3>
+                <p class="text-sm mt-2">Effortlessly track and report carbon emissions with automated monitoring,
+                    ensuring accuracy and compliance in sustainability reporting.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 2.png" alt="Simplified Certification Process" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">Simplified Certification Process</h3>
+                <p class="text-sm mt-2">Streamline your certification process with our simplified, automated solution,
+                    reducing complexity and ensuring faster compliance.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 2 (1).png" alt="AI-Driven Insights" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">AI-Driven Insights</h3>
+                <p class="text-sm mt-2">Leverage AI-driven insights to uncover hidden patterns, optimize sustainability
+                    strategies, and drive impactful decision-making.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 2 (2).png" alt="Customizable Reports" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">Customizable Reports</h3>
+                <p class="text-sm mt-2">Create tailored reports to highlight key sustainability metrics and share
+                    insights with stakeholders effectively.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <img src="./assets/Group 2 (3).png" alt="Real-Time Data Analysis" class="w-10 h-10 mb-4">
+                <h3 class="font-bold">Real-Time Data Analysis</h3>
+                <p class="text-sm mt-2">Access real-time carbon data to make informed decisions quickly and stay ahead
+                    of sustainability goals.</p>
+            </div>
+        </div>
+        <!-- OUR SERVICES  -->
+        <section class="max-w-5xl mx-auto p-8">
+            <h2 class="text-green-500 font-bold">OUR SERVICES</h2>
+            <h1 class="text-4xl font-bold mt-2">What do <span class="text-orange-400">we do?</span></h1>
+            <div class="grid md:grid-cols-2 gap-10 items-center mt-8">
+                <img src="./assets/Page -3 Image.png" alt="Eco-friendly tech" class="w-full rounded-lg shadow-lg">
+                <div class="space-y-6">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-card">
+                        <h3 class="text-2xl font-bold">GHG Accounting</h3>
+                        <p>We provide GHG accounting services, measuring and reporting Scope 1, 2, and 3 emissions. Our
+                            process ensures compliance and helps organizations track and reduce their carbon footprint.
+                        </p>
+                        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">See More Details</button>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-card">
+                        <h3 class="text-2xl font-bold">GHG Accounting</h3>
+                        <p>We provide GHG accounting services, measuring and reporting Scope 1, 2, and 3 emissions. Our
+                            process ensures compliance and helps organizations track and reduce their carbon footprint.
+                        </p>
+                        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">See More Details</button>
+                    </div>
+                    <div id="hidden-cards" class="hidden space-y-6">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-card">
+                            <h3 class="text-2xl font-bold">GHG Accounting</h3>
+                            <p>We provide GHG accounting services, measuring and reporting Scope 1, 2, and 3 emissions.
+                                Our process ensures compliance and helps organizations track and reduce their carbon
+                                footprint.</p>
+                            <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">See More Details</button>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-card">
+                            <h3 class="text-2xl font-bold">GHG Accounting</h3>
+                            <p>We provide GHG accounting services, measuring and reporting Scope 1, 2, and 3 emissions.
+                                Our process ensures compliance and helps organizations track and reduce their carbon
+                                footprint.</p>
+                            <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">See More Details</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button id="toggle-btn" class="text-green-500 text-3xl animate-bounce">▼</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        </script>
+        <script>
+            document.getElementById('toggle-btn').addEventListener('click', function () {
+                const hiddenCards = document.getElementById('hidden-cards');
+                hiddenCards.classList.toggle('hidden');
+                this.textContent = hiddenCards.classList.contains('hidden') ? '▼' : '▲';
+            });
+        </script>
+
+
+</body>
+
+</html>
